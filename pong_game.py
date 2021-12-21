@@ -94,12 +94,12 @@ while True:
     if ball.ycor() > 290:  # when the ball reaches 290 pixels(max. 300) we have to change the ball direction to the opposite corner
         ball.sety(290)
         ball.my *= -1  # this function reverses the direction of the ball
-        winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)
+        winsound.PlaySound("bounce_ball", winsound.SND_ASYNC)
 
     if ball.ycor() < -290:
         ball.sety(-290)
         ball.my *= -1
-        winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)
+        winsound.PlaySound("bounce_ball", winsound.SND_ASYNC)
 
     # Border checking (left)
     if ball.xcor() > 390:
@@ -120,5 +120,5 @@ while True:
     if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor() + 40 and ball.ycor() > paddle_b.ycor() -40):
         ball.setx(340)
         ball.mx *= -1
-        winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)
+        winsound.PlaySound("bounce_ball", winsound.SND_ASYNC)
 
